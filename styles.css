@@ -35,7 +35,7 @@ a{
 }
 
 .container {
-    padding: 56px 16px 56px 216px;
+    padding: 56px 32px 56px 216px;
     display: flex;
     justify-content: end;
 }
@@ -507,7 +507,6 @@ TESTIMONIALS
 
 #testimonials {
     position: relative;
-    height: 100vh;
 }
 
 .testimonial__waves {
@@ -646,4 +645,183 @@ TESTIMONIALS
 .testimonials__page--indicator--icon {
     color: #ffffff;
     margin: 6px;
+}
+
+/* 
+
+DISCORD
+
+*/
+
+#discord {
+    margin-top: 200px;
+    background: linear-gradient(180deg, #FFFFFF, #F8F8FE, #F2F2FF, #FFFFFF );
+    z-index: 1;
+}
+
+.discord__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.discord__content--text {
+    width: 100%;
+    max-width: 500px;
+    margin: 40px;
+}
+
+.discord__content--tag {
+    font-size: 13px;
+    font-weight: 400;
+    width: 120px;
+    height: 26px;
+    color: #444CAA;
+    border-radius: 4px;
+    background-color: #EDEDFD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 12px 0;
+}
+
+.discord__content--title {
+    margin: 24px 0;
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.discord__content--para {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    color: rgba(46, 42, 138, 0.6);
+}
+
+.discord__join--button {
+    margin: 24px 0;
+    color: #ffffff;
+    background: linear-gradient(180deg, #6269B3, #7390DC );
+    border-radius: 20px;
+    width: 216px;
+    height: 64px;
+    font-size: 20px;
+}
+
+.discord__content--graphic {
+    width: 100%;
+    max-width: 500px;
+    margin: 40px;
+}
+
+/* 
+
+PROJECTS
+
+*/
+
+#projects {
+    position: relative;
+}
+
+.projects__wave {
+    position: absolute;
+    bottom: -200px;
+    right: 0px;
+    overflow: hidden;
+    z-index: -2;
+}
+
+.projects__wrapper {
+    margin: 0 auto;
+    max-width: 1500px;
+    display: flex;
+    align-items: center;
+}
+
+.projects__graphic {
+    width: 65%;
+}
+
+.projects__image {
+    width: 100%;
+}
+
+.projects__text {
+    width: 35%;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.projects__title {
+    color: #6168C5;
+    font-size: 38px;
+    font-weight: 600;
+    margin: 32px;
+}
+
+.projects__para {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.projects__button {
+    margin: 24px 0;
+    color: #ffffff;
+    background: linear-gradient(180deg, #685AD1, #9087DC );
+    border-radius: 20px;
+    width: 216px;
+    height: 64px;
+    font-size: 20px;
+}
+
+/* 
+
+FOOTER
+
+*/
+
+#footer {
+    position: relative;
+}
+
+.footer__wave {
+    position: absolute;
+    top: -6px;
+    right: 0px;
+    overflow: hidden;
+    z-index: -2;
+}
+
+.footer__wrapper {
+    margin: 160px auto 0 auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.footer__resources {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+}
+
+.footer__resources--title {
+    margin: 24px 0;
+}
+
+.footer__link {
+    color: #4D4F52;
+}
+
+.footer__link, .footer__socials {
+    margin: 8px 0;
+}
+
+.social__link {
+    margin: 0 8px;
+    color: #7F8287;
 }
