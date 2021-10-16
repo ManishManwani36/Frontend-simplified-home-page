@@ -14,6 +14,11 @@ a{
     text-decoration: none;
 }
 
+figure {
+    margin: 0;
+    padding: 0;
+}
+
 ::-webkit-scrollbar {
     background-color: transparent;
     width: 5px;
@@ -35,9 +40,9 @@ a{
 }
 
 .container {
-    padding: 56px 32px 56px 216px;
+    padding: 56px 64px 56px 312px;
     display: flex;
-    justify-content: end;
+    justify-content: center;
 }
   
 .row {
@@ -66,6 +71,17 @@ a{
     overflow: hidden;
     line-height: 0;
     z-index: -2;
+    display: block;
+}
+
+.wave-mobile {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    overflow: hidden;
+    line-height: 0;
+    z-index: -2;
+    display: none;
 }
 
 /* 
@@ -78,6 +94,12 @@ NAV
     position: relative;
 }
 
+.hero__background {
+    background-image: url("./assets/hero-bg.png");
+    background-size: cover;
+    background-position: top center;
+}
+
 .nav__bar {
     display: flex;
     align-items: center;
@@ -88,6 +110,7 @@ NAV
     z-index: 10;
     width: 100%;
     position: absolute;
+    
 }
 
 .nav__logo{
@@ -120,7 +143,7 @@ NAV
 
 .nav__side-bar {
     width: 200px;
-    height: 1000px;
+    height: 100vh;
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.1);
     position: absolute;
     position: fixed;
@@ -129,6 +152,7 @@ NAV
     background-color: #ffffff;
     z-index: 1;
 }
+
 /* 
 
 HERO 
@@ -136,14 +160,20 @@ HERO
 */
 
 .hero__page {
-    margin-top: 136px;
+    margin-top: 112px;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .hero__content, .hero__design {
-    width: 100%;
-    max-width: 660px;
+    width: 50%;
+    min-width: 420px;
+}
+
+.hero__design {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .hero__content--title {
@@ -159,6 +189,7 @@ HERO
     line-height: 1.3;
     font-size: 30px;
     font-weight: 400;
+    max-width: 660px;
 }
 
 .hero__buttons {
@@ -189,7 +220,7 @@ HERO
 
 .hero__design--mask {
     transform: translateY(-120px);
-    width: 80%;
+    width: 70%;
 }
 
 .hero__boy {
@@ -259,12 +290,12 @@ CONNECTIONS
 }
 
 .connections__text:before {
-    left: 6%;
+    left: 4%;
     background: linear-gradient(90deg, #869eff6e, #909CFB, #A082F5 );
 }
 
 .connections__text:after {
-    right: 6%;
+    right: 4%;
     background: linear-gradient(-90deg, #869eff6e, #909CFB, #A082F5 );
 }
 
@@ -276,7 +307,14 @@ CONNECTIONS
 }
 
 .connections__companies--img--mask {
+    height: 100%;
+    min-height: 40px;
+    max-height: 100px;
     margin: 24px;
+}
+
+.connections__companies--img {
+    height: 100%;
 }
 
 .connections__tag-line {
@@ -339,21 +377,23 @@ PREVIEW
 }
 
 .preview__units{
-    width: 1320px;
+    max-width: 1320px;
     margin: 132px auto;
 }
 
 .preview__unit--item{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin: 280px 0 0 0;
     position: relative;
-    max-height: 400px;
+    width: 100%;
 }
 
-.preview__unit--basic--text, .preview__unit--basic--img {
-    width: 50%;
-    max-width: 500px;
+.preview__unit--content, .preview__unit--img {
+    width: 46%;
+    min-width: 360px;
+    max-width: 660px;
 }
 
 .preview__unit--tag {
@@ -383,20 +423,20 @@ PREVIEW
     color: rgba(46, 42, 138, 0.6);
 }
 
-.preview__unit--basic--img{
+.basic__image--aligment {
     display: flex;
-    justify-content: end;
+
 }
 
 .tech__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 16px;
+    margin: 4px auto;
 }
 
 .tech__img--mask--js {
     animation: bounce 4s 100ms ease-in-out infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .tech__img--shadow--mask--js {
@@ -405,6 +445,9 @@ PREVIEW
 
 .tech__img--mask--css {
     animation: bounce 4s 500ms ease-in-out infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .tech__img--shadow--mask--cs {
@@ -413,6 +456,9 @@ PREVIEW
 
 .tech__img--mask--html {
     animation: bounce 4s 700ms ease-in-out infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .tech__img--shadow--mask--html {
@@ -421,6 +467,9 @@ PREVIEW
 
 .tech__img--mask--react {
     animation: bounce 4s 300ms ease-in-out infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .tech__img--shadow--mask--react {
@@ -446,16 +495,6 @@ PREVIEW
 
 .dividers:after{
     bottom: -184px;
-}
-
-.preview__unit--press-play--text {
-    width: 50%;
-    max-width: 500px;
-}
-
-.preview__unit--press-play--img {
-    width: 50%;
-    max-width: 500x;
 }
 
 .project__screens{
@@ -486,11 +525,6 @@ PREVIEW
     animation: bounce 8s 300ms ease-in-out infinite reverse;
 }
 
-.preview__unit--showcase--text, .preview__unit--showcase--img {
-    width: 50%;
-    max-width: 500px;
-}
-
 .tech__img--mask--github {
     animation: bounce 4s 100ms ease-in-out infinite;
 }
@@ -507,6 +541,12 @@ TESTIMONIALS
 
 #testimonials {
     position: relative;
+}
+
+.testimonial__background {
+    background-image: url("./assets/Testimonail\ Wave\ bg.png");
+    background-size: cover;
+    background-position: top center;
 }
 
 .testimonial__waves {
@@ -722,6 +762,13 @@ PROJECTS
 
 #projects {
     position: relative;
+    height: 100vh;
+}
+
+.projects__background {
+    background-image: url("./assets/projects\ bg.png");
+    background-size: cover;
+    background-position: top center;
 }
 
 .projects__wave {
@@ -787,6 +834,12 @@ FOOTER
     position: relative;
 }
 
+.footer__background {
+    background-image: url("./assets/footer\ wave.png");
+    background-size: cover;
+    background-position: top center;
+}
+
 .footer__wave {
     position: absolute;
     top: -6px;
@@ -824,4 +877,114 @@ FOOTER
 .social__link {
     margin: 0 8px;
     color: #7F8287;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 32px;
+    }
+
+    .row {
+        margin: 0 auto;
+    }
+
+    .background {
+        background-image: url("./assets/hero\ bg\ mobile.png");
+        background-size: cover;
+        background-position: top center;
+    }
+
+    .nav__bar {
+        padding: 8px 16px;
+    }
+
+    .nav__logo {
+        font-size: 20px;
+    }
+
+    .nav__unlock--button {
+        display: none;
+    }
+
+    .nav__side-bar {
+        display: none;
+    }
+
+    .hero__page {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero__content--title {
+        font-size: 35px;
+    }
+
+    .hero__content--text {
+        margin: 0 auto;
+        padding: 32px;
+        font-size: 16px;
+        max-width: 256px;
+    }
+
+    .hero__buttons {
+        margin-top: 0;
+    }
+
+    .btn {
+        height: 47px;
+        width: 114px;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 50px;
+    }
+    
+    .hero__sign-up{
+        background: linear-gradient(180deg, #A08AFB, #7353D6);
+        color: #ffffff;
+    }
+    
+    .hero__sign-in{
+        background-color: #ffffff;
+        color: #2E2A8A;
+    }
+
+    .hero__design--mask {
+        margin: 0 auto;
+        transform: translateY(0px);
+        width: 70%;
+    }
+
+    .connections__text {
+        font-size: 12px;
+    }
+
+    .connections__text:before, .connections__text:after{
+        display: none;
+    }
+
+    .connections__companies--img--mask {
+        height: 40px;
+        margin: 4px;
+    }
+
+    .connections__tag-line {
+        font-size: 14px;
+    }
+
+    .preview__units {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+
+/* SMALL PHONES LARGE SMARTPHONES */
+@media (max-width: 526px) {
+    .background {
+        background-image: url("./assets/hero\ bg\ mobile.png");
+        background-size: cover;
+        background-position: top center;
+    }
 }
