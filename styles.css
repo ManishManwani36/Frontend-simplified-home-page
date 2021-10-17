@@ -392,7 +392,7 @@ PREVIEW
 
 .preview__unit--content, .preview__unit--img {
     width: 46%;
-    min-width: 360px;
+    min-width: 300px;
     max-width: 660px;
 }
 
@@ -483,7 +483,7 @@ PREVIEW
 .dividers:before, .dividers:after {
     content: "";
     display: block;
-    width: 1400px;
+    width: 100%;
     height: 1px;
     position: absolute;
     background: linear-gradient(-90deg, rgba(134, 158, 255, 0.26), #909CFB, #A082F5, #a182f546 );
@@ -547,6 +547,7 @@ TESTIMONIALS
     background-image: url("./assets/Testimonail\ Wave\ bg.png");
     background-size: cover;
     background-position: top center;
+    padding: calc(10% + 56px) calc(10% + 64px) calc(10% + 56px) calc(10% + 312px);
 }
 
 .testimonial__waves {
@@ -703,6 +704,7 @@ DISCORD
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .discord__content--text {
@@ -762,7 +764,6 @@ PROJECTS
 
 #projects {
     position: relative;
-    height: 100vh;
 }
 
 .projects__background {
@@ -784,10 +785,13 @@ PROJECTS
     max-width: 1500px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .projects__graphic {
     width: 65%;
+    min-width: 300px;
 }
 
 .projects__image {
@@ -798,6 +802,7 @@ PROJECTS
     width: 35%;
     text-align: center;
     margin-bottom: 100px;
+    min-width: 300px;
 }
 
 .projects__title {
@@ -832,12 +837,8 @@ FOOTER
 
 #footer {
     position: relative;
-}
+    background: linear-gradient(180deg, #FFFFFF, #F8F8FE, #F2F2FF);
 
-.footer__background {
-    background-image: url("./assets/footer\ wave.png");
-    background-size: cover;
-    background-position: top center;
 }
 
 .footer__wave {
@@ -976,6 +977,190 @@ FOOTER
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        margin: 0 auto;
+    }
+    
+    .preview__unit--item {
+        margin: 32px auto;
+    }
+
+    .preview__scroll--text {
+        font-size: 12px;
+    }
+
+    .preview__scroll--icon {
+        font-size: 18px;
+    }
+
+    .preview__unit--tag {
+       font-size: 13px;
+    }
+
+    .preview__unit--title {
+        font-size: 18px;
+    }
+
+    .preview__unit--text {
+        font-size: 14px;
+        line-height: 23px;
+    }
+
+    .tehc__item {
+        display: flex;
+        align-items: space-between;
+        justify-content: center;
+    }
+
+    .tech__img--mask--js, .tech__img--mask--css, .tech__img--mask--html, .tech__img--mask--react {
+        max-width: 56px;
+        margin: 0 auto;
+    }
+
+    .tech__img {
+        width: 100%;
+    } 
+
+    .dividers:before{
+        top: -50px;
+    }
+    
+    .dividers:after{
+        bottom: -50px;
+    }
+
+    .tech__img--mask--github, .tech__img--shadow--mask--github {
+        width: 112px;
+    }
+
+    .testimonials__title{
+        font-size: 20px;
+        margin: 24px;
+    }
+
+    .testimonials__title:after {
+        width: 32.87px;
+        height: 2px;
+        left: 38%;
+        bottom: -50%;
+    }
+
+    .testimonials__sub-title {
+        font-size: 12px;
+        margin: 24px;
+    }
+
+    .testimonials__cards {
+        width: 100%;
+    }
+
+    .carousel__arrow {
+        margin: 0;
+    }
+
+    .testimonial__quotation--marks {
+        width: 28px;
+        height: 28px;
+    }
+
+    .quotation--img {
+        width: 100%;
+    }
+
+    .testimonial__profile-picture {
+        left: 34%;
+    } 
+
+    .testimonial__card {
+        padding: 24px;
+        height: auto;
+    }
+
+    .testimonial__text {
+        font-size: 12px;
+        line-height: 19px;
+    }
+
+    .testimonial__text:after{
+        width: 100%;
+        bottom: -10px;
+    }
+
+    .testimonials__page--indicator {
+        font-size: 12px;
+    }
+
+    .testimonial__name {
+        font-size: 13px;
+    }
+
+    .second__card {
+        display: none;
+    }
+
+    #discord {
+        margin: 0;
+    }
+
+    .discord__content--text {
+        margin: 0;
+    }
+
+    .discord__content--tag {
+        font-size: 13px;
+    }
+
+    .discord__content--title {
+        font-size: 18px;
+    }
+
+    .discord__content--para {
+        font-size: 14px;
+        line-height: 23px;
+    }
+
+    .discord__join--button {
+        width: 117px;
+        height: 44px;
+        border-radius: 10.83px;
+        font-size: 15px;
+    }
+
+    .discord__content--image--mask, .discord__content--image, .discord__content--image--shadow--mask, .discord__content--image--shadow {
+        width: 100%;
+    }
+
+    .projects__title {
+        font-size: 16px;
+    }
+
+    .projects__para {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .projects__button {
+        width: 115px;
+        height: 44px;
+        border-radius: 10.63px;
+        font-size: 15px;
+    }
+
+    .projects__text {
+        margin-bottom: 0;
+    }
+
+    .footer__wrapper {
+        margin: 0;
+        font-size: 12.16px;
+        padding: 0;
+    }
+
+    .footer__resources {
+       font-size: 12.16px; 
+    }
+
+    .social__link {
+        margin: 0 4px;
     }
 }
 
